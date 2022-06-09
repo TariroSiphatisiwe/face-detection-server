@@ -127,6 +127,6 @@ appApi.models.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
 
 })
 
-app.listen(3001, () => {
-    console.log('app is running')
+app.listen(process.env.PORT||3001, () => {
+    console.log(`App is running on Port ${process.env.PORT}`)
 })
