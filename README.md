@@ -1,6 +1,6 @@
 ### face-detection-server
 
-This is a **Node.js** and **Express.js** server that connects the frontend of my face detection application with **psql Database** 
+This is a **Node.js** and **Express.js** **RESTful server** that connects the frontend of my face detection application with **psql Database** 
 The server and database are connected using **Knex**,
 
 ### Database collects:
