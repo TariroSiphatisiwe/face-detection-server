@@ -10,12 +10,11 @@ import Clarifai from 'clarifai'
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'sparty20',
-        database: 'postgres',
-        port: '5432'
-    }
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+        rejectUnauthorized: false,
+        },
+        },
 });
 
 db.select('*').from('users').then(data => console.log(data))
